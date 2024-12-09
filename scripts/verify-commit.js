@@ -8,7 +8,6 @@ const msg = readFileSync(msgPath, "utf-8").trim();
 
 const commitRE =
   /^(revert: )?(feat|fix|docs|dx|style|refactor|perf|test|workflow|build|ci|chore|types|wip|release)(\(.+\))?: .{1,50}/;
-console.log("commit Test:", commitRE);
 
 if (!commitRE.test(msg)) {
   console.log();
@@ -19,7 +18,7 @@ if (!commitRE.test(msg)) {
       ) +
       `    ${pico.green(`feat(model): add 'eslint' option`)}\n` +
       `    ${pico.green(`fix(lint): unpdate lint config (#21)`)}\n\n` +
-      pico.red(`  See .github/commit-convention.md for more details.\n`),
+      pico.red(`  See .github/commit-conventions.md for more details.\n`),
   );
   process.exit(1);
 }

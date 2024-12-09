@@ -1,15 +1,20 @@
 <a name="readme-top"></a>
 
 <div align="center">
+<p align="center">
+    <a target="_blank" href="https://github.com/RoseAplmus/rose-lint.git">
+        <img alint="center" height="200" src="./assets/RoseLintLogo.svg">
+    </a>
+</p>
 
-<br/>
 <h1>Rose Lint</h1>
+<p align="left">
 A library that provides Eslint, Prettier, Commitlint, Sytlelint, Changelog configurations for RoseUi
+</p>
 
 <!-- PKC GROUP -->
 
-[![][rspack-shield]][rspack-link]
-[![][pnpm-shield]][pnpm-link]
+[![][rspack-shield]][rspack-link] [![][pnpm-shield]][pnpm-link]
 
 </div>
 

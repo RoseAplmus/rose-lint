@@ -22,3 +22,4 @@ if (!commitRE.test(msg)) {
   );
   process.exit(1);
 }
+console.log(` ${pico.greenBright("commit successfully!")}`);

@@ -1,0 +1,7 @@
+{
+  "name": "@rose/prettier",
+  "version": "0.0.1",
+  "preview": true,
+  "main": "index.ts",
+  "license": "MIT"
+}

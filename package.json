@@ -1,0 +1,56 @@
+{
+    "name": "@rose/lint",
+    "version": "0.0.0",
+    "description": "This is the lint library for the rose UI",
+    "author": "Norush",
+    "license": "MIT",
+    "homepage": "https://github.com/RoseAplmus/rose-lint.git",
+    "bugs": {
+        "url": "https://github.com/RoseAplmus/rose-lint/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/RoseAplmus/rose-lint.git"
+    },
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "dev": "rspack serve",
+        "start": "pnpm run dev",
+        "build": "rspack build"
+    },
+    "devDependencies": {
+        "@rspack/cli": "^1.1.5",
+        "@rspack/core": "^1.1.5",
+        "esbuild": "^0.24.0",
+        "esbuild-register": "^3.6.0",
+        "eslint": "^9.16.0",
+        "prettier": "3.4.2",
+        "simple-git-hooks": "^2.11.1"
+    },
+    "dependencies": {
+        "picocolors": "^1.1.1"
+    },
+    "simple-git-hooks": {
+        "pre-commit": "pnpm lint-staged",
+        "commit-msg": "node scripts/verify-commit.js"
+    },
+    "lint-staged": {
+        "*.{js,json}": [
+            "prettier --write"
+        ],
+        "*.ts?(x)": [
+            "eslint --fix",
+            "prettier --parser=typescript --write"
+        ]
+    },
+    "packageManager": "pnpm@9.14.0",
+    "engines": {
+        "node": ">=18.12.0",
+        "pnpm": ">=9.0.0"
+    },
+    "publishConfig": {
+        "access": "public",
+        "registry": "https://registry.npmjs.org"
+    }
+}

@@ -18,7 +18,8 @@
   "scripts": {
     "dev": "rspack serve",
     "start": "pnpm run dev",
-    "build": "rspack build"
+    "build": "rspack build",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
     "@rspack/cli": "^1.1.5",
@@ -33,8 +34,8 @@
     "picocolors": "^1.1.1"
   },
   "simple-git-hooks": {
-    "pre-commit": "npx lint-staged",
-    "commit-msg": "node scripts/verify-commit.js"
+    "pre-commit": "npx lint-staged && pnpm test",
+    "commit-msg": "node scripts/verify-commit.js && pnpm run test"
   },
   "lint-staged": {
     "*.{js,json}": [
